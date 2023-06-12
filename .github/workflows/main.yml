@@ -1,0 +1,42 @@
+name: Deploy portfolio to Github Pages
+
+# Run this workflow on everytime there's a git push to the master branch
+on: 
+  push: 
+    branches: [ master ]
+    
+jobs:
+  deploy-to-github-pages:
+    # Use ubuntu-latest image to run steps on
+    runs-on: ubuntu-latest
+    steps:
+    
+    # Use GitHub's checkout action to checkout code from the master branch.
+    # Once this action is performed, code will be available for this workflow to work with.
+    - uses: actions/checkout@v3
+    
+    # Install .NET SDK on the Ubuntu Machine.
+    - name: Setup NET Core SDK 3.1
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.302
+        
+    # Publish the Blazor project to the release-folder
+    - name: Publish .NET Core Project
+      run: dotnet publish portfolio.csproj -c Release -o release --nologo
+      
+    # Change the href attribute of base tag in index.html from '/' to 'portfolio' to match the Github Pages' repository subdirectory
+    - name: Change the href attribute of base tag in index.html from '/' to 'portfolio'
+      run: sed -i 's/<base href="\/" \/>/<base href="\/portfolio\/" \/>/g' release/wwwroot/index.html
+    
+    # Add .nojekyll file to command Github Pages to not treat this whole project as a Jekyll project. This means allow files and folders that start with an underscore.
+    - name: Add .nojekyll file
+      run: touch release/wwwroot/.nojekyll
+    
+    # Finally commit this project to GitHub Pages
+    - name: Commit wwwroot to Github Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
+        folder: release/wwwroot
