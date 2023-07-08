@@ -1,56 +1,111 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Montserrat:wght@300;400&display=swap');
 
+
 body {
-    background-color: #1F1F1F;
+    background-color: #1f1f1f;
     font-size: 12px;
     color: #F5F5F5;
     font-family: 'Montserrat', sans-serif;
 }
 
-hr {
-    color: #F5F5F5;
-}
-
-.vr {
-    color: #F5F5F5;
-}
-
 .business-card {
-    margin: 75px 250px;
     border: 1px solid #C0AC60;
-    padding: 50px;
-    background-color: #1F1F1F;
+    margin: 20px 20px;
+    padding: 20px 1px;
+    height: 100vh;
 }
 
-.left-content section img {
-    height: 200px;
-    width: 200px;
+.profile img {
+    width: 120px;
+    height: 120px;
 }
 
-.social-links li a img {
-    height: 40px;
-    width: 40px;
-}
-
-.right-content section h1 {
+.name {
+    font-size: 32px;
+    font-family: Arizonia;
     color: #C0AC60;
-    font-family: 'Arizonia', cursive;
 }
 
-.right-content section p {
-    color: #F5F5F5;
+.social-links ul li a img {
+    height: 25px;
+    width: 25px;
 }
 
-.right-content section .nav .nav-link {
-    color: #C0AC60;
-    font-size: 13px;
+.buttons .btn-gold {
+    color: #ffffff;
+    background-color: #C0AC60;
+    border: 1px solid #C0AC60;
+    border-radius: 0px;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-.right-content section .nav .nav-link img {
-    height: 20px;
-    width: 20px;
+.btn-gold-outline {
+    background-color: transparent !important;
 }
+
+.info-nav a {
+    border: 1px solid #C0AC60;
+    background-color: transparent !important;
+    padding: 20px;
+}
+
+.info-nav nav a img {
+    height: 30px;
+    width: 30px;
+}
+
+/*X-Small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap
+
+Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+
+}
+
+/*Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Blazor Styles */
 
@@ -99,11 +154,11 @@ hr {
     transform: rotate(-90deg);
 }
 
-    .loading-progress circle:last-child {
-        stroke: #1b6ec2;
-        stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
-        transition: stroke-dasharray 0.05s ease-in-out;
-    }
+.loading-progress circle:last-child {
+    stroke: #1b6ec2;
+    stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+    transition: stroke-dasharray 0.05s ease-in-out;
+}
 
 .loading-progress-text {
     position: absolute;
