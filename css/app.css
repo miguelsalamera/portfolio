@@ -9,10 +9,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.inner-body {
-    height: 100vh;
-}
-
 .business-card {
     border: 1px solid #C0AC60;
 }
