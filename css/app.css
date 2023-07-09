@@ -4,16 +4,17 @@
 
 body {
     background-color: #1f1f1f;
-    font-size: 12px;
+    font-size: 10px;
     color: #F5F5F5;
     font-family: 'Montserrat', sans-serif;
 }
 
+.inner-body {
+    height: 100vh;
+}
+
 .business-card {
     border: 1px solid #C0AC60;
-    margin: 20px 20px;
-    padding: 20px 1px;
-    height: 100vh;
 }
 
 .profile img {
@@ -37,11 +38,7 @@ body {
     background-color: #C0AC60;
     border: 1px solid #C0AC60;
     border-radius: 0px;
-    font-size: 12px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
+    font-size: 10px;
 }
 
 .btn-gold-outline {
@@ -51,13 +48,13 @@ body {
 .info-nav a {
     border: 1px solid #C0AC60;
     background-color: transparent !important;
-    padding: 20px;
 }
 
 .info-nav nav a img {
     height: 30px;
     width: 30px;
 }
+
 
 /*X-Small devices (portrait phones, less than 576px)
  No media query for `xs` since this is the default in Bootstrap
