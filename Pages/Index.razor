@@ -1,17 +1,16 @@
 ﻿@page "/"
 
 <PageTitle>Hi! I'm Miguel!</PageTitle>
-
-<div class="inner-body d-flex flex-column justify-content-center min-vh-100">
-    <section class="business-card m-3 p-1">
+<div class="d-flex flex-column justify-content-center min-vh-100">
+    <section class="border border-2 border-gold m-3 p-1">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <section class="profile">
                         <div class="d-flex flex-column align-items-center my-4">
                             <img class="img-responsive rounded-circle border border-5 mb-4" src="images/profile-picture.jpeg" />
-                            <h1 class="name text-center mb-3">Miguel Salamera</h1>
-                            <p class="text-center mb-3">A solution-focused software engineer and web developer aiming to be 1% better every day.</p>
+                            <h1 class="font-family-Allison display-1 text-gold text-center mb-3">Miguel Salamera</h1>
+                            <p class="text-center mb-1">A solution-focused software engineer and web developer aiming to be 1% better every day.</p>
                         </div> 
                     </section>
                     <section class="social-links">
@@ -35,25 +34,30 @@
                     </section>
                 </div>
                 <div class="col-12">
-                    <section class="buttons my-4">
-                        <div class="d-flex flex-row justify-content-center">
-                            <button class="btn btn-gold mx-2 px-4 py-1">About Me</button>
-                            <button class="btn btn-gold btn-gold-outline mx-2 px-4 py-1">References</button>
-                        </div>
-                    </section>
-                    <section class="info-nav my-5">
-                        <nav class="nav d-flex flex-row justify-content-center">
-                            <a class="p-2 mx-2" href="#">
-                                <img src="images/icons8-work-100.png" class=""/>
-                            </a>
-                            <a class="p-2 mx-2" href="#">
-                                <img src="images/icons8-career-100.png" class=""/>
-                            </a>
-                            <a class="p-2 mx-2" href="#">
-                                <img src="images/icons8-education-100.png" class=""/>
-                            </a>
-                        </nav>
-                    </section>
+                    <div class="">
+                        <section class="buttons my-4">
+                            <div class="d-flex flex-row justify-content-center">
+                                <button class="btn border-1 bg-gold text-light border-gold mx-2 px-4 py-1">About Me</button>
+                                <button class="btn border-1 border-gold text-light mx-2 px-4 py-1">References</button>
+                            </div>
+                        </section>
+                        <section class="info-nav my-5">
+                            <nav class="nav d-flex flex-row justify-content-center">
+                                <a class="p-1 mx-3 border border-1 border-gold text-reset text-decoration-none" href="#">
+                                    <img src="images/icons8-work-100.png" class=""/>
+                                    <span class="d-none d-sm-non">&nbsp;&nbsp;Projects Created</span>
+                                </a>
+                                <a class="p-1 mx-3 border border-1 border-gold text-reset text-decoration-none" href="#">
+                                    <img src="images/icons8-career-100.png" class=""/>
+                                    <span class="d-none d-sm-none">&nbsp;&nbsp;Career History</span>
+                                </a>
+                                <a class="p-1 mx-3 border border-1 border-gold text-reset text-decoration-none" href="#">
+                                    <img src="images/icons8-education-100.png" class=""/>
+                                    <span class="d-none d-sm-none">&nbsp;&nbsp;Educational Background</span>
+                                </a>
+                            </nav>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
