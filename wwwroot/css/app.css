@@ -4,11 +4,6 @@
 
 /* X-Small devices (portrait phones, less than 576px). No media query for `xs` since this is the default in Bootstrap. */
 
-.device-meter {
-    min-height: 5vh;
-    background-color: red;
-}
-
 body {
     background-color: #1f1f1f;
     font-size: 10px;
@@ -24,6 +19,14 @@ body {
     background-color: #C0AC60;
 }
 
+.text-gold {
+    color: #C0AC60;
+}
+
+.profile h1 {
+    font-size: 45px;
+}
+
 .profile img {
     width: 120px;
     height: 120px;
@@ -31,10 +34,6 @@ body {
 
 .font-family-Allison {
     font-family: 'Allison', cursive;
-}
-
-.text-gold {
-    color: #C0AC60;
 }
 
 .social-links ul li a img {
@@ -55,42 +54,47 @@ body {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {  
-    .device-meter {
-        min-height: 5vh;
-        background-color: orange;
-    }
+
 }
 
 /*Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .device-meter {
-        min-height: 5vh;
-        background-color: yellow;
+    body {
+        font-size: 16px;
+    }
+
+    .profile h1 {
+        font-size: 100px;
+    }
+
+    .social-links ul li a img {
+        height: 35px;
+        width: 35px;
+    }
+
+    .buttons button {
+        font-size: 16px;
+    }
+
+    .info-nav nav a img {
+        height: 35px;
+        width: 35px;
     }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .device-meter {
-        min-height: 5vh;
-        background-color: green;
-    }
+
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .device-meter {
-        min-height: 5vh;
-        background-color: blue;
-    }
+
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-    .device-meter {
-        min-height: 5vh;
-        background-color: indigo;
-    }
+
 }
 
 
